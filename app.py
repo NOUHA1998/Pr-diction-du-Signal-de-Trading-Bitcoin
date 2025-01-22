@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import joblib
+import io
 
 # CSS pour personnaliser l'interface
 st.markdown(
@@ -56,10 +57,8 @@ if menu == "Introduction":
         Cliquez sur les autres sections pour en savoir plus sur chaque étape du processus.
         """
     )
-
-    )
 # Section : Compréhension des données
-    if menu == "Compréhension des données":
+elif menu == "Compréhension des données":
     st.title("📊 Compréhension des données")
     st.write(
         """
@@ -108,12 +107,13 @@ if menu == "Introduction":
     ax.set_ylabel("Prix de clôture")
     st.pyplot(fig)
 
-
 # Section : Préparation des données
-   elif menu == "Préparation des données":
+elif menu == "Préparation des données":
     st.header("⚙️ Préparation des données")
     
     st.write(
+        
+  
         """
         Dans cette section, nous détaillons les étapes de préparation des données utilisées pour entraîner notre modèle de prédiction des signaux de trading Bitcoin.
         
