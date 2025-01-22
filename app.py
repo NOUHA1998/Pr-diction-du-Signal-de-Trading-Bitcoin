@@ -25,13 +25,14 @@ st.markdown(
 
 # Charger le modèle
 try:
-    model = joblib.load('bitcoin_price_model.pkl')
+    model = joblib.load('bitcoin_signal_model.pkl')
 except FileNotFoundError:
     model = None
-    st.error("Le modèle 'bitcoin_price_model.pkl' est introuvable. Assurez-vous qu'il est dans le même dossier que 'app.py'.")
+    st.error("Le modèle 'bitcoin_signal_model.pkl' est introuvable. Assurez-vous qu'il est dans le même dossier que 'app.py'.")
 
 # Sommaire interactif
-st.sidebar.image("/content/Logo.png", caption="Bitcoin Market", use_column_width=True)
+st.sidebar.image("/content/Logo.png", caption="Bitcoin Market", use_container_width=True)
+
 
 st.sidebar.title("Sommaire")
 menu = st.sidebar.radio(
